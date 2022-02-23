@@ -1,0 +1,107 @@
+<div class="nav_path">
+  <button mat-button [routerLink]=" '' ">Home</button>
+ /
+  <button mat-button [routerLink]=" '' ">India</button>
+/
+  <button mat-button [routerLink]=" '' ">chennai </button>
+</div>
+
+
+<mat-tab-group mat-align-tabs="start">
+
+  <mat-tab label="Delivery">
+    <ng-template mat-tab-label>
+      <mat-icon class="matIcon"> local_shipping</mat-icon>
+      Dining
+    </ng-template>
+
+<div style="margin-top: 1em;"> 
+<button type="button" class="btn btn-primary">Filter</button>
+<button type="button" class="btn btn-outline-secondary">Delivery time</button>
+<button type="button" class="btn btn-outline-secondary">Pure veg</button>
+<button type="button" class="btn btn-outline-secondary">Rating 4.0+</button>
+<button type="button" class="btn btn-outline-secondary">Great offers</button>
+<button type="button" class="btn btn-outline-secondary">Cuiiness</button>
+
+</div>
+  </mat-tab>
+<mat-tab>
+  <ng-template mat-tab-label>
+    <mat-icon class="matIcon"> restaurant</mat-icon>
+    Dining Out
+  </ng-template>
+</mat-tab>
+<mat-tab>
+  <ng-template mat-tab-label>
+    <mat-icon class="matIcon">wc</mat-icon>
+    Night life
+  </ng-template>
+</mat-tab>
+
+</mat-tab-group>
+<div class="carousalDiv offer_section">
+  <span>Delivery Restaurents in chennai</span>
+<owl-carousel-o [options]="customOptions" >
+  <ng-container *ngFor="let slide of banner" >
+    <ng-template carouselSlide [id]="slide.id" >
+      <img [src]="slide.imgUrl" [alt]="slide.imgName" [title]="slide.imgName">
+      <div class="name">
+        <span>{{slide.imgName}}</span>
+      </div>
+    </ng-template>
+  </ng-container>
+
+</owl-carousel-o>
+</div>
+<div class="carousalDiv  companySection">
+  <span>Top brands for you</span>
+<owl-carousel-o [options]="customOptionsTwo">
+  <ng-container *ngFor="let slide of bannerTwo" >
+    <ng-template carouselSlide [id]="slide.id" >
+      <img [src]="slide.imgUrl" [alt]="slide.imgName" [title]="slide.imgName">
+      <div class="name2">
+        <span>{{slide.imgName}}</span>
+      </div>
+    </ng-template>
+
+  </ng-container>
+
+</owl-carousel-o>
+</div>
+
+<div>
+
+
+
+
+  <div class="row" >
+    <span>Delivery Restaurents in chennai</span>
+    <div class="col-xl-3 col-md-4 col-lg-4 col-sm-4 col-6" *ngFor="let img of productList">
+      <div class="card">
+        <img src="{{img.imgUrl}}" alt="Photo of {{img.imgName}}" class="">
+        <button mat-button class="specialbutton">20% off</button>
+        <div class="card-body">
+          <div style="display: flex; justify-content: space-between;">
+            <div class="card-title">
+              {{img.imgName}}</div>
+              <button mat-button class="ratingButton">{{img.rating}}<mat-icon>star</mat-icon></button>
+              
+          </div>
+          <div style="display: flex; justify-content: space-between;">
+          <div class="card-subtitle text-muted">{{img.subTitle}}</div>
+          <button class="card-subtitle text-muted" mat-button>{{img.offer}} for One</button>
+          </div>
+          <hr>
+          <div style="display: flex; justify-content: space-between;" class="card-subtitle text-muted">
+          <div class="card-subtitle text-muted">{{img.orders}} Orders placed from here recently</div>
+          <mat-icon class="card-subtitle text-muted">trending_up</mat-icon>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </div>
+</div>

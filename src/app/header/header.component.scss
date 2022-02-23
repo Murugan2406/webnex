@@ -1,0 +1,46 @@
+
+  .searform{
+    display: flex;
+}
+.navbar-expand-lg {
+  flex-wrap: nowrap;
+  justify-content: space-between !important;
+}
+.headerSections{
+display: flex;
+align-items: center;
+}
+.img{
+width: 100%;
+height: 2em;
+}
+:host ::ng-deep.mat-form-field-appearance-legacy .mat-form-field-underline {
+display: none;
+}
+
+:host ::ng-deep.mat-form-field-appearance-legacy .mat-form-field-wrapper {
+padding-bottom: 0 !important;
+font-size: 14px;
+font-family: var(--heading-font-family);
+}
+.middleHeader{
+    padding: 4px 5px 4px 0;
+    display: flex;
+    align-items: center;
+    height: 42px;
+}
+
+.header-search{
+border-left: 1px solid blue;
+
+}
+.mat-select{
+text-align: start;
+margin-bottom: 5px;
+}
+.middleHeader{
+    box-shadow: 0 0 5px rgba(177, 146, 116, 0.5), 0 0 15px rgba(134, 110, 170, 0.3);
+}
+.mat-input-element{
+    margin-left: 5%;
+}
